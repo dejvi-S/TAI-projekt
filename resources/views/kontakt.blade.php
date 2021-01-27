@@ -53,6 +53,13 @@
         </ul>
     </div>
     @endif
+    @if (\Session::has('fail'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('fail') !!}</li>
+        </ul>
+    </div>
+    @endif
     <form  action="" method="post" action="{{ route('store')  }}">
       <h1>FORMULARZ KONTAKTOWY</h1>
       @csrf

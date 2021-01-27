@@ -54,6 +54,13 @@
         </ul>
     </div>
     @endif
+    @if (\Session::has('fail'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('fail') !!}</li>
+        </ul>
+    </div>
+    @endif
     <div id="formularzZamowienia">
       <form method="post" action="{{ route('update', $order[0]->id)  }}">
       {{ csrf_field() }}
