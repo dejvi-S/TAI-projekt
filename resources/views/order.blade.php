@@ -93,7 +93,7 @@
             name="adres"
             placeholder="Adres"
             required
-            pattern="([A-ZĄĘŚŹŻŁĆÓ]{1}[a-ząęśżźłćó]{1,19}[\s]{0,})+"
+            pattern="([A-ZĄĘŚŹŻŃŁĆÓ]{1}[a-ząęśżńźłćó]{1,19}[\s]{0,})+"
             title="Każdy człon nazwy zaczynaj od wielkiej litery "
           />
           <div class="groupout">
@@ -104,7 +104,7 @@
                 id="dom"
                 name="nr_domu"
                 placeholder="Numer domu"
-                pattern="[1-9]{1}([0-9])+"
+                pattern="^\d+[a-zA-Z]*$"
               />
             </div>
             <div class="groupin">

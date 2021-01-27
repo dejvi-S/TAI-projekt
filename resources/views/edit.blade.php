@@ -35,7 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <title>dejviS</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../public/favicon.ico" />
     <!-- Personalizowany kod CSS -->
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/kontakt.css" />
@@ -96,7 +96,7 @@
             name="adres"
             placeholder="Adres"
             required
-            pattern="([A-ZĄĘŚŹŻŁĆÓ]{1}[a-ząęśżźłćó]{1,19}[\s]{0,})+"
+            pattern="([A-ZĄĘŚŹŃŻŁĆÓ]{1}[a-ząęśżńźłćó]{1,19}[\s]{0,})+"
             title="Każdy człon nazwy zaczynaj od wielkiej litery "
             value="{{ $order[0]->adres }}"
           />
@@ -108,7 +108,7 @@
                 id="dom"
                 name="nr_domu"
                 placeholder="Numer domu"
-                pattern="[1-9]{1}([0-9])+"
+                pattern="\d+[a-zA-Z]*$"
                 value="{{ $order[0]->nr_domu }}"
               />
             </div>
