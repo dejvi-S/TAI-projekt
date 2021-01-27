@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat:wght@400;500&display=swap");
+/* Resetowanie HTML */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* Domyślne ustawienia */
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+.spacer {
+  width: 100%;
+  height: 20vh;
+  background-color: rgba(252, 90, 134, 0.9);
+  color: white;
+  text-shadow: 1px 1px 1px rgb(46, 46, 46);
+  font-family: "Iceland", cursive;
+  text-align: center;
+  display: flex;
+  font-size: 4rem;
+  flex-direction: column;
+  padding-top: 6vh;
+  align-items: center;
+}
+.containter {
+  width: 70%;
+  padding-left: 15%;
+  align-items: center;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
+/* Body */
+body {
+  background-image: url("../img/mainImgTheme.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Nawigacja */
+nav {
+  color: white;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: rgb(10, 29, 72);
+  box-shadow: 1px 2px 2px rgb(252, 90, 134);
+  display: flex;
+  align-items: center;
+  padding-left: 22.5%;
+  z-index: 10;
+}
+nav > ul > li {
+  display: inline;
+  padding-left: 25px;
+}
+nav > ul > li > a {
+  color: white;
+}
+nav a:hover {
+  color: rgb(252, 90, 134);
+  text-shadow: 1px 1px 1px rgb(112, 112, 112);
+}
+#spacer {
+  height: 60px;
+  width: 100%;
+}
+nav > a {
+  font-family: "Iceland", cursive;
+  color: white;
+  font-size: 3em;
+}
+#przycisk-koszyk {
+  width: 35px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  background-image: url("../img/trolley.png");
+  background-repeat: no-repeat;
+}
+#przycisk-koszyk:hover {
+  background-color: rgb(252, 90, 134);
+}
+@media (max-width: 1100px) {
+  nav {
+    padding-left: 3%;
+  }
+  nav > a {
+    font-size: 2rem;
+  }
+  nav > ul > li > a {
+    font-size: 0.8rem;
+  }
+}
+/* Wizytowka */
+.wizytowka {
+  color: white;
+  text-shadow: 0px -1px 2px rgb(46, 46, 46);
+  font-family: "Iceland", cursive;
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  padding-top: 30vh;
+  flex-direction: column;
+  align-items: center;
+}
+.wizytowka h1 {
+  font-size: 10rem;
+  top: 50vh;
+}
+.wizytowka h3 {
+  margin-bottom: 40px;
+  font-size: 5rem;
+}
+/* Przycisk */
+.przycisk {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 10px 10px 10px 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  border-color: white;
+  border-style: solid;
+}
+.przycisk:hover {
+  background-color: rgb(252, 90, 134);
+  border-color: rgb(252, 90, 134);
+}
+
+#wizytowka-projekty {
+  height: 60%;
+}
+
+#wizytowka-technologie {
+  height: 40%;
+}
+#polecenia {
+  height: 50%;
+}
+
+#omnie {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 60%;
+  width: 100%;
+  background-color: rgba(10, 29, 72, 0.5);
+}
+#omnie h2 {
+  font-family: "Iceland", cursive;
+  font-size: 3rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#omnie p {
+  font-size: 1.5rem;
+}
+footer {
+  height: 30px;
+  color: white;
+  text-shadow: 0px -1px 2px rgba(46, 46, 46, 0.5);
+  background-color: rgb(252, 90, 134);
+  box-shadow: 0px -2px 2px rgb(10, 29, 72);
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 7px;
+}
+.animacjakoszyk {
+  animation-name: koszykAnim;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes koszykAnim {
+  0% {
+    background-color: white;
+    border-color: white;
+  }
+  50% {
+    background-color: rgb(252, 90, 134);
+    border-color: rgb(252, 90, 134);
+  }
+  100% {
+    background-color: white;
+    border-color: white;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wizytowka  h1 {
+    font-size: 4rem;
+  }
+  .wizytowka h3 {
+    font-size: 2rem;
+  }
+  #wizytowka-technologie {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: min-content;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    margin-bottom: 10vh;
+  }
+  .technologia {
+    width: 60vw;
+    min-height: 150px;
+  }
+}
+.projekty {
+  height: 200px;
+  width: 30vw;
+  min-width: 200px;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(112, 112, 112);
+  font-size: 2.8rem;
+  font-weight: 600;
+  justify-content: center;
+}
+#wizytowka-projekty {
+  padding-left: 20vw;
+  padding-right: 20vw;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+#polecenia {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.komentarze {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  width: 60%;
+  color: rgb(10, 29, 72);
+  height: 100px;
+  background-color: white;
+  text-align: center;
+  font-weight: 500;
+  justify-content: center;
+}
+.komentarze img {
+  height: 20px;
+  width: 60px;
+}
+@media (max-width: 720px) {
+  #wizytowka-projekty {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .komentarze {
+    height: 125px;
+  }
+}
+.d-block {
+  width: 150x;
+  height: 150px;
+}
+#carouselExampleSlidesOnly {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: calc(50vw - 100px);
+}
+#username {
+  font-weight: bold;
+  padding-right: 15px;
+  padding-left: 10px;
+  border-left: 2px;
+  border-style: solid;
+  border-color: white;
+}
