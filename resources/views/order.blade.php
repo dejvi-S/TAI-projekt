@@ -35,7 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <title>dejviS</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../public/favicon.ico" />
     <!-- Personalizowany kod CSS -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/kontakt.css" />
@@ -140,7 +140,7 @@
             <input type="checkbox" id="labelCheckbox" required />
             <label for="labelCheckbox">Nie znam regulaminu</label>
           </div>
-          <button type="submit" id="przyciskGlowny" class="przycisk-formularz">Zamów</button>
+          <button type="submit" onclick="return confirm('Czy na pewno chcesz złożyć zamówienie?')" id="przyciskGlowny" class="przycisk-formularz">Zamów</button>
           <button type="reset" class="przycisk-formularz">Wyczyść</button>
         </div>
       </form>

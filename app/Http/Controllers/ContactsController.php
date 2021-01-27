@@ -17,17 +17,6 @@ class ContactsController extends Controller
         return view('kontakt');
     }
 
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //walidacja
@@ -38,7 +27,7 @@ class ContactsController extends Controller
             'numerTelk' => 'required|regex:/[0-9]{9}/u',
             'wiadomosc'  => 'required|between:20,250'
             ]);
-
+        filter_var($request, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $contact= new Contact();
 
         $contact->imie= $request['imiek'];
@@ -50,50 +39,5 @@ class ContactsController extends Controller
         $contact->save();
 
         return redirect()->back()->with('success', 'Wiadomość została wysłana!');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Contact $contact)
-    {
-        //
     }
 }

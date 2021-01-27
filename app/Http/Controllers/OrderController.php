@@ -24,14 +24,14 @@ class OrderController extends Controller
             'imie' => 'required|regex:/[A-ZĄŃĘŚŹŻŁĆÓ]{1}[a-ząśńężźłćó]{1,19}/u',
             'nazwisko' => 'required|regex:/([A-ZĄŃĘŚŹŻŁĆÓ]{1}[a-ząęśżźłńćó]{1,19})(-?[A-ZĄĘŃŚŹŻŁĆÓ]{1}[a-ząńęśżźłćó]{1,19})?/u',
             'email' => 'required|email',
-            'adres' => 'required',
+            'adres' => 'required|regex:/([A-ZĄĘŚŹŻŃŁĆÓ]{1}[a-ząęśżńźłćó]{1,19}[\s]{0,})+/u',
             'telefon' => 'required|regex:/[0-9]{9}/u',
             'www' => 'required',
-            'nr_domu' => 'required',
-            'kod_pocztowy' => 'required',
+            'nr_domu' => 'required|regex:/^\d+[a-zA-Z]*$/u',
+            'kod_pocztowy' => 'required|regex:/\d{2}-\d{3}/u',
             'check' => 'required|between:1,50'
         ]);
-
+        filter_var($request, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         if (Auth::check()) {
             $order = new Order();
             $order->id_uzytkownika = Auth::user()->id;
@@ -80,13 +80,14 @@ class OrderController extends Controller
                 'imie' => 'required|regex:/[A-ZĄŃĘŚŹŻŁĆÓ]{1}[a-ząśńężźłćó]{1,19}/u',
                 'nazwisko' => 'required|regex:/([A-ZĄŃĘŚŹŻŁĆÓ]{1}[a-ząęśżźłńćó]{1,19})(-?[A-ZĄĘŃŚŹŻŁĆÓ]{1}[a-ząńęśżźłćó]{1,19})?/u',
                 'email' => 'required|email',
-                'adres' => 'required',
+                'adres' => 'required|regex:/([A-ZĄĘŚŹŻŃŁĆÓ]{1}[a-ząęśżńźłćó]{1,19}[\s]{0,})+/u',
                 'telefon' => 'required|regex:/[0-9]{9}/u',
                 'www' => 'required',
-                'nr_domu' => 'required',
-                'kod_pocztowy' => 'required',
+                'nr_domu' => 'required|regex:/^\d+[a-zA-Z]*$/u',
+                'kod_pocztowy' => 'required|regex:/\d{2}-\d{3}/u',
                 'check' => 'required|between:1,50'
             ]);
+            filter_var($request, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $input = $request->all();
             $order = Order::find($order);
             $order->imie = $input['imie'];

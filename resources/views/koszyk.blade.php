@@ -58,8 +58,8 @@
           <th>{{$item->www}}</th>
           <th>{{$item->opcje}}</th>
           <th>{{$item->data}}</th>
-          <th><form action="{{ route('edit', $item->id) }}}"><button click class="przycisk">Edit</button></form></th>
-          <th><form action="{{ route('delete', $item->id) }}}"><button class="przycisk">Usuń</button></form></th>
+          <th><form action="{{ route('edit', $item->id) }}}"><button onclick="return confirm('Czy chcesz edytować element?')" click class="przycisk">Edit</button></form></th>
+          <th><form action="{{ route('delete', $item->id) }}}"><button onclick="return confirm('Czy chcesz ununąć element?')" class="przycisk">Usuń</button></form></th>
         </tr>
         @endforeach
     </table>

@@ -35,7 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <title>dejviS</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../public/favicon.ico" />
     <!-- Personalizowany kod CSS -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/oferta.css" />

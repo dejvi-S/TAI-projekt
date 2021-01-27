@@ -35,7 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <title>dejviS</title>
-    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='../../public/favicon.ico' />
 
     <!-- Personalizowany kod CSS -->
     <link rel="stylesheet" href="css/main.css" />
@@ -94,7 +94,7 @@
           <input type="checkbox" id="labelCheckbox" required>
           <label for="labelCheckbox">Potwierdzam 100% nieznajomość regulaminu.</label>
         </div>
-        <button type="submit" name="send" value="Submit" class="przycisk-formularz">Wyślij</button>
+        <button onclick="return confirm('Czy na pewno wysłać wiadomość?')" type="submit" name="send" value="Submit" class="przycisk-formularz">Wyślij</button>
         <button type="reset" class="przycisk-formularz">Wyczyść</button>
       </div>
     </form>
